@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get "/addressbook", to: "address_book#index"
   get "/newcontact", to: "new_contact#index"
   # root "articles#index"
+  resources :people, only: [:create, :index, :update, :destroy]
 end
