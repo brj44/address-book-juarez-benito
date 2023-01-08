@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+
+  skip_before_action :require_login, only: [:new, :create]
   before_action :set_contact, only: %i[ show edit update destroy ]
 
   def index
