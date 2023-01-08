@@ -1,0 +1,11 @@
+<div class="d-flex align-items-center justify-content-center">
+  <h1>New Phone Number</h1>
+</div>
+<br>
+<div class="d-flex align-items-center justify-content-center">
+  <%= link_to "Back to phone numbers", phone_numbers_path, :class => "btn btn-primary" %>
+</div>
+<br>
+<div class="d-flex align-items-center justify-content-center">
+  <%= render "form", phone_number: @phone_number %>
+</div>
