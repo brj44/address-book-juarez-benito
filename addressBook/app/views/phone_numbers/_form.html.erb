@@ -1,0 +1,45 @@
+<div class="d-flex align-items-center justify-content-center">
+  <%= form_with(model: phone_number) do |form| %>
+    <% if phone_number.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(phone_number.errors.count, "error") %> prohibited this phone_number from being saved:</h2>
+
+        <ul>
+          <% phone_number.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="mb-3">
+      <%= form.label :firstName, 'First Name', style: "display: block", :class => "form-label"%>
+      <%= form.text_field :firstName, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :middleName, 'Middle Name', style: "display: block", :class => "form-label" %>
+      <%= form.text_field :middleName, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :lastName, 'Last Name', style: "display: block", :class => "form-label" %>
+      <%= form.text_field :lastName, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :number, style: "display: block", :class => "form-label" %>
+      <%= form.number_field :number, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :comment, style: "display: block", :class => "form-label" %>
+      <%= form.text_field :comment, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.submit :class => "btn btn-primary"%>
+    </div>
+  <% end %>
+
+</div>

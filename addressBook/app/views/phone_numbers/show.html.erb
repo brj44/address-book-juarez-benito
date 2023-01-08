@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="d-flex align-items-center justify-content-center">
+  <h1>Phone Number Info</h1>
+</div>
+
+<div class="d-flex align-items-center justify-content-center">
+  <%= render @phone_number %>
+</div>
+<br>
+
+<div class="d-flex align-items-center justify-content-center">
+  <%= link_to "Edit this phone number", edit_phone_number_path(@phone_number), :class => "btn btn-primary" %> |
+  <%= link_to "Back to phone numbers", phone_numbers_path, :class => "btn btn-primary" %> |
+
+  <%= button_to "Destroy this phone number", @phone_number, method: :delete, :class => "btn btn-primary" %>
+</div>

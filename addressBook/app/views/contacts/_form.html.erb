@@ -1,0 +1,55 @@
+<div class="d-flex align-items-center justify-content-center">
+  <%= form_with(model: contact) do |form| %>
+    <% if contact.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+        <ul>
+          <% contact.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="mb-3">
+      <%= form.label :salutation, style: "display: block", :class => "form-label" %>
+      <%= form.select :salutation, ['Mr.', 'Mrs.', 'Ms.'], :prompt => 'Select One', :class => 'form-select'%>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :firstName, 'First Name', style: "display: block", :class => "form-label" %>
+      <%= form.text_field :firstName, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :middleName, 'Middle Name', style: "display: block", :class => "form-label" %>
+      <%= form.text_field :middleName, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :lastName, 'Last Name', style: "display: block", :class => "form-label"%>
+      <%= form.text_field :lastName, :class => "form-control"%>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :SSN, 'SSN', style: "display: block", :class => "form-label" %>
+      <%= form.number_field :SSN, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :birthDate, 'Birth Date', style: "display: block", :class => "form-label" %>
+      <%= form.date_field :birthDate, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :comment, style: "display: block", :class => "form-label" %>
+      <%= form.text_field :comment, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.submit :class => "btn btn-primary"%>
+    </div>
+  <% end %>
+
+</div>

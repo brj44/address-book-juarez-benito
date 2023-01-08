@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="d-flex align-items-center justify-content-center">
+<h1>Phone Numbers</h1>
+</div>
+<br>
+
+<div class="d-flex align-items-center justify-content-center">
+  <%= link_to "Add a New Phone Number", new_phone_number_path, :class => "btn btn-primary" %>
+</div>
+<br>
+
+
+  <% @phone_numbers.each do |phone_number| %>
+  <div id="phone_numbers" class="d-flex align-items-center justify-content-center">
+    <%= render phone_number %>
+  </div>
+  <div class="d-flex align-items-center justify-content-center">
+    <p>
+      <%= link_to "Show this phone number", phone_number, :class => "btn btn-primary" %>
+    </p>
+  </div>
+  <% end %>
+
+
+

@@ -1,0 +1,14 @@
+<div class="d-flex align-items-center justify-content-center">
+  <h1>Edit Contact</h1>
+</div>
+<br>
+
+<div class="d-flex align-items-center justify-content-center">
+  <%= link_to "Show this contact", @contact, :class => "btn btn-primary" %> |
+  <%= link_to "Back to contacts", contacts_path,  :class => "btn btn-primary" %>
+</div>
+<br>
+
+<div class="d-flex align-items-center justify-content-center">
+  <%= render "form", contact: @contact %>
+</div>
