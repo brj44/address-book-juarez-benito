@@ -11,7 +11,7 @@
 
 <div class="d-flex align-items-center justify-content-center">
   <%= link_to "Edit this phone number", edit_phone_number_path(@phone_number), :class => "btn btn-primary" %> |
-  <%= link_to "Back to phone numbers", phone_numbers_path, :class => "btn btn-primary" %> |
+  <%= link_to "Back to phone numbers", phone_numbers_path(first_name: @phone_number.firstName, middle_name: @phone_number.middleName, last_name: @phone_number.lastName), :class => "btn btn-primary" %> |
 
   <%= button_to "Destroy this phone number", @phone_number, method: :delete, :class => "btn btn-primary" %>
 </div>
