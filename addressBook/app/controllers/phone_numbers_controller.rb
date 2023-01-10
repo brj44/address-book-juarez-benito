@@ -3,7 +3,7 @@ class PhoneNumbersController < ApplicationController
 
   # GET /phone_numbers or /phone_numbers.json
   def index
-    @phone_numbers = PhoneNumber.all
+    @phone_numbers = PhoneNumber.where(firstName: params[:first_name], middleName: params[:middle_name], lastName: params[:last_name])
   end
 
   # GET /phone_numbers/1 or /phone_numbers/1.json

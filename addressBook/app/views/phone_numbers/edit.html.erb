@@ -5,7 +5,7 @@
 
 <div class="d-flex align-items-center justify-content-center">
   <%= link_to "Show this phone number", @phone_number, :class => "btn btn-primary"%> |
-  <%= link_to "Back to phone numbers", phone_numbers_path, :class => "btn btn-primary" %>
+  <%= link_to "Back to phone numbers", phone_numbers_path(first_name:@phone_number.firstName, middle_name: @phone_number.middleName, last_name: @phone_number.lastName), :class => "btn btn-primary" %>
 </div>
 <br>
 
