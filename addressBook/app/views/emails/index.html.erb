@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="d-flex align-items-center justify-content-center">
+  <h1>Emails</h1>
+</div>
+<br>
+
+<div class="d-flex align-items-center justify-content-center">
+  <%= link_to "New email", new_email_path, :class => "btn btn-primary" %>|
+  <%= link_to "Back to contacts", contacts_path, :class => "btn btn-primary" %>
+</div>
+
+
+  <% @emails.each do |email| %>
+  <div id="emails" class="d-flex align-items-center justify-content-center">
+    <%= render email %>
+  </div>
+  <div class="d-flex align-items-center justify-content-center">
+    <p>
+      <%= link_to "Show this email", email, :class => "btn btn-primary" %>
+    </p>
+  </div>
+  <% end %>

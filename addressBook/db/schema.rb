@@ -10,9 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_08_161154) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_11_024542) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.string "firstName", null: false
+    t.string "middleName"
+    t.string "lastName", null: false
+    t.string "street", null: false
+    t.string "town", null: false
+    t.integer "zipCode", null: false
+    t.string "state"
+    t.string "country", null: false
+    t.string "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.string "salutation", null: false
@@ -21,6 +35,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_08_161154) do
     t.string "lastName", null: false
     t.integer "SSN"
     t.date "birthDate"
+    t.string "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "emails", force: :cascade do |t|
+    t.string "firstName", null: false
+    t.string "middleName"
+    t.string "lastName", null: false
+    t.string "emailAddress", null: false
     t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

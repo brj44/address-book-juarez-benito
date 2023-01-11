@@ -1,0 +1,64 @@
+<div class="d-flex align-items-center justify-content-center">
+  <%= form_with(model: address) do |form| %>
+    <% if address.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(address.errors.count, "error") %> prohibited this address from being saved:</h2>
+
+        <ul>
+          <% address.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="mb-3">
+      <%= form.label :firstName, 'First Name', style: "display: block", :class => "form-label"%>
+      <%= form.text_field :firstName, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :middleName, 'Middle Name', style: "display: block", :class => "form-label" %>
+      <%= form.text_field :middleName, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :lastName, 'Last Name', style: "display: block", :class => "form-label" %>
+      <%= form.text_field :lastName, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :street, style: "display: block", :class => "form-label" %>
+      <%= form.text_field :street, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :town, style: "display: block", :class => "form-label" %>
+      <%= form.text_field :town, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :zipCode, "Zip Code", style: "display: block", :class => "form-label" %>
+      <%= form.number_field :zipCode, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :state, style: "display: block", :class => "form-label" %>
+      <%= form.text_field :state, :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :country, style: "display: block", :class => "form-label" %>
+      <%= form.country_select :country, ([ "United States" ]), :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :comment, style: "display: block", :class => "form-label" %>
+      <%= form.text_area :comment, :cols => 3,  :class => "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.submit :class => "btn btn-primary"%>
+    </div>
+  <% end %>
+</div>
