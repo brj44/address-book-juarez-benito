@@ -1,0 +1,13 @@
+<div class="d-flex align-items-center justify-content-center">
+  <h1>Editing Email</h1>
+</div>
+<br>
+
+<div class="d-flex align-items-center justify-content-center">
+  <%= link_to "Show this email", @email, :class => "btn btn-primary" %> |
+  <%= link_to "Back to emails", emails_path(first_name:@email.firstName, middle_name: @email.middleName, last_name: @email.lastName), :class => "btn btn-primary" %>
+</div>
+
+<div class="d-flex align-items-center justify-content-center">
+  <%= render "form", email: @email %>
+</div>
