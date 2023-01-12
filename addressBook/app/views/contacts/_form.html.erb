@@ -19,7 +19,7 @@
 
     <div class="mb-3">
       <%= form.label :firstName, 'First Name', style: "display: block", :class => "form-label" %>
-      <%= form.text_field :firstName, :class => "form-control" %>
+      <%= form.text_field :firstName, :class => "form-control", :required => true %>
     </div>
 
     <div class="mb-3">
@@ -29,7 +29,7 @@
 
     <div class="mb-3">
       <%= form.label :lastName, 'Last Name', style: "display: block", :class => "form-label"%>
-      <%= form.text_field :lastName, :class => "form-control"%>
+      <%= form.text_field :lastName, :class => "form-control", :required => true%>
     </div>
 
     <div class="mb-3">
