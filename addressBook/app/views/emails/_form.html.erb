@@ -1,5 +1,5 @@
 <div class="d-flex align-items-center justify-content-center">
-  <%= form_with(model: email) do |form| %>
+  <%= form_with model: [email], id: "emails-form" do |form| %>
     <% if email.errors.any? %>
       <div style="color: red">
         <h2><%= pluralize(email.errors.count, "error") %> prohibited this email from being saved:</h2>

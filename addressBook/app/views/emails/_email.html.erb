@@ -1,4 +1,4 @@
-<div id="<%= dom_id email %>">
+<div id="<%= dom_id email, :class => "email-"+ email.id.to_s %>">
   <p>
     <strong>Firstname:</strong>
     <%= email.firstName %>
