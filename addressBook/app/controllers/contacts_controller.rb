@@ -22,9 +22,11 @@ class ContactsController < ApplicationController
       if @contact.save
         format.html { redirect_to contact_url(@contact), notice: "Contact was successfully created." }
         format.json { render :show, status: :created, location: @contact }
+        format.js
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
+        format.js
     end
     end
   end
@@ -35,9 +37,11 @@ class ContactsController < ApplicationController
       if @contact.update(contact_params)
         format.html { redirect_to contact_url(@contact), notice: "Contact was successfully updated." }
         format.json { render :show, status: :ok, location: @contact }
+        format.js
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end

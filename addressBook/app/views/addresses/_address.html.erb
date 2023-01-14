@@ -1,4 +1,4 @@
-<div id="<%= dom_id address %>">
+<div id="<%= dom_id address, :class => "address-"+ address.id.to_s %>">
   <p>
     <strong>Firstname:</strong>
     <%= address.firstName %>

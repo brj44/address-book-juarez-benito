@@ -1,5 +1,5 @@
 <div class="d-flex align-items-center justify-content-center">
-  <%= form_with(model: phone_number) do |form| %>
+  <%= form_with model: [phone_number], id: "phone_numbers-form"  do |form| %>
     <% if phone_number.errors.any? %>
       <div style="color: red">
         <h2><%= pluralize(phone_number.errors.count, "error") %> prohibited this phone_number from being saved:</h2>
