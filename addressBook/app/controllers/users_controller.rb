@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     if @user.valid?
       session[:user_id] = @user.id
-      redirect_to @user
+      redirect_to "/sessions/new", notice: "Email was successfully created."
     else
       flash[:error] = "Error- please try to create an account again."
       redirect_to new_user_path
