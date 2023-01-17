@@ -3,6 +3,7 @@
 #### Each contact can have multiple phone numbers, addresses, and email addresses associated to them that can similarly be created, edited, updated, and deleted.
 
 This project was created for the purpose of learning how to use the Ruby on Rails framework.
+If you get a rails access not allowed error please just refresh the page.
 
 By Benito Juarez 1/16/2023
 
